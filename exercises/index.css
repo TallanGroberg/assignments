@@ -1,3 +1,25 @@
 body {
-  background-color: rgb(231, 227, 227)
+  background-color: rgb(231, 227, 227);
+}
+.header {
+  font-style: Georgia;
+  text-align: center;
+  
+}
+.title {
+  color: green;
+}
+p {
+ 
+  line-height: 25px;
+}
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+img {
+  padding: 2%;
+  float: left;
 }

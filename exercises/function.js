@@ -5,11 +5,11 @@ const add = () => {
 }
 console.log(add())
 
-// const bigint = () => {
-//   const num = [4, 5, 6]
-//   return Math.max(...num)
-// }
-// console.log(bigint())
+const bigint = () => {
+  const num = [4, 5, 6]
+  return Math.max(...num)
+}
+console.log(bigint())
 
 const evOodd = () => {
   const num = ''
@@ -40,7 +40,7 @@ const fib = (niche) => {
   niche = []
   r = []
   for ( let i = 0; i > 50; i++) {
-    
+
     r = i + nichie
   }
   niche = r + r2d2 

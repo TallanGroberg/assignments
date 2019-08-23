@@ -1,8 +1,6 @@
 
 profile = [ 
 
-  
-
   {
     name: 'bob',
   hobbies: [
@@ -67,7 +65,6 @@ profile = [
     }
     
   }}
-
   
 ]
 

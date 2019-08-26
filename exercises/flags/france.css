@@ -1,0 +1,33 @@
+body {
+  background-color: aliceblue;
+}
+
+.container {
+  display: flex;
+  justify-content: column;
+
+}
+
+.france {
+  height: 75%;
+  width: 75%;
+}
+
+.blue {
+  height: 10em;
+  width: 5em;
+  background-color: #002395;
+
+}
+
+.white {
+  height: 10em;
+  width: 5em;
+  background-color: #ffffff;
+}
+
+.red {
+  height: 10em;
+  width: 5em;
+  background-color: #ED2839;
+}

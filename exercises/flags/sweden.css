@@ -1,0 +1,30 @@
+
+body {
+  background-color: aliceblue;
+}
+
+.container {
+  margin-left: 20%;
+  margin-right: 30%;
+  background-color: #006AA7;
+}
+
+
+
+#cross {
+  margin-top: -18px;
+  margin-left: 175px;
+  background-color: #FECC00;
+  height: 400px;
+  position: relative;
+  width: 100px;
+}
+#cross:after {
+  background: #FECC00;
+  content: "";
+  height: 100px;
+   left: -175px; 
+  position: absolute;
+  top: 140px;
+  width: 712px;
+}

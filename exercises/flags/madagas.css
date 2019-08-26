@@ -1,0 +1,30 @@
+body {
+  background-color: aliceblue;
+}
+
+.container {
+  justify-content: center;
+  margin: 5%;
+  position: auto
+}
+.white {
+  background-color: white;
+  height: 200px;
+  width: 100px;
+  float: left;
+  margin-top: -3px;
+
+}
+.red  {
+  /* margin-top: -3%; */
+  height: 100px;
+  width: 300px;
+  background-color: red;
+}
+
+.green {
+  height: 100px;
+  width: 300px;
+  background-color: #007E3A;
+  margin-top: -19px;
+}

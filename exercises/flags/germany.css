@@ -1,0 +1,26 @@
+body {
+  background-color: aliceblue;
+}
+
+.container {
+  
+
+}
+
+.black {
+  background-color: black;
+  height: 100px;
+  width: 40%;
+}
+
+.red {
+  background-color: #DD0001;
+  height: 100px;
+  width: 40%;
+}
+
+.yellow {
+  background-color: #FFCE00;
+  height: 100px;
+  width: 40%;
+}

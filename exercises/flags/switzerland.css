@@ -1,0 +1,33 @@
+body {
+  background-color: aliceblue
+}
+
+.container {
+  margin-left: 25%;
+  margin-right: 27%;
+  justify-content: center;
+}
+
+.red {
+  position: relative;
+  background-color: red;
+  height: 500px;
+}
+#cross {
+  margin-top: -450px;
+  margin-left: 250px;
+  background-color: white;
+  height: 400px;
+  position: relative;
+  width: 100px;
+}
+#cross:after {
+  background: white;
+  content: "";
+  height: 100px;
+  left: -175px;
+  position: absolute;
+  top: 140px;
+  width: 450px;
+}
+

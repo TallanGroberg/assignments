@@ -1,0 +1,39 @@
+body {
+  background-color: aliceblue
+}
+
+.container {
+  background-color: azure;
+  height: 500px;
+  width: 800px;
+  margin: auto;
+  left: 0;
+  right: 0;
+}
+
+.corner {
+  z-index: 1;
+  height: 250px;
+  width: 250px;
+  background-color: #0D5EAF;
+}
+
+#cross {
+  margin-top: 100px;
+  background-color: #C10000;
+  height: 250px;
+  position: relative;
+  width: 35px;
+  left: 100px;
+
+}
+#cross:after {
+  background: #c10000;
+  content: "";
+  height: 40px;
+  margin: auto;
+  left: -100px;
+  position: absolute;
+  top: 93px;
+  width: 250px;
+}

@@ -33,7 +33,9 @@ img {
 }
 
 .blog {
-  position: center;
+  margin: auto;
+  left: 0;
+  right: 0;
   border: 5px solid black;
   width: 75%;
   background-color: rgb(201, 209, 216);

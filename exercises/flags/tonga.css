@@ -1,0 +1,44 @@
+body {
+  background-color: aliceblue;
+}
+
+h1 {
+  text-align: center;
+}
+
+.container {
+  margin: auto;
+  left: 0;
+  right: 0;
+  background-color: #C10000;
+  height: 500px;
+  width: 800px;
+}
+
+.corner {
+  background-color: azure;
+  height: 200px;
+  width: 300px;
+  padding: -10px;
+}
+
+#cross {
+  margin-top: 100px;
+  background-color: #C10000;
+  height: 128px;
+  position: relative;
+  width: 35px;
+  left: 129px;
+  top: 26px;
+}
+#cross:after {
+  background: #c10000;
+  content: "";
+  height: 40px;
+  margin: auto;
+  right: 0;
+  left: -43px;
+  position: absolute;
+  top: 43px;
+  width: 120px;
+}

@@ -1,0 +1,28 @@
+body {
+  background-color: aliceblue;
+}
+
+h1 {
+  text-align: center;
+}
+
+.container {
+  margin: auto;
+  left: 0;
+  right: 0;
+  height: 500px;
+  width: 800px;
+  border: 1px solid black;
+  background-color: white;
+  padding: 20px;
+  position: absolute;
+}
+
+.red {
+  margin-left: 246px;
+  margin-top: 102px;
+  height: 300px;
+  width: 300px;
+  border-radius: 50%;
+  background-color: #BC002D;
+}

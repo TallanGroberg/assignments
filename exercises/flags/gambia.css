@@ -1,0 +1,39 @@
+body {
+  background-color: aliceblue;
+}
+
+h1 {
+  text-align: center;
+}
+
+.container {
+  margin: auto;
+  left: 0;
+  right: 0;
+  width: 700px;
+  height: 438px;
+  background-color: azure;
+  /* border: 1px solid black; */
+}
+
+.red {
+  background-color: #CE1126;
+  height: 150px;
+  width: 700px;
+  margin-bottom: 30px;
+}
+
+.blue {
+  background-color: #0C1C8C;
+  height: 80px;
+  width: 700px
+}
+
+.green {
+  background-color: #3A7728;
+  margin-top: 30px;
+  
+  height: 150px;
+  width: 700px;
+
+}

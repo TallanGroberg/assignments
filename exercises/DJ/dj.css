@@ -1,0 +1,15 @@
+body {
+  background-color: aliceblue;
+}
+
+.container {
+  margin: 10%;
+  background-color: wheat;
+  height: 20em;
+  width: 20em;
+
+
+}
+.scroll {
+  height: 2000px;
+}

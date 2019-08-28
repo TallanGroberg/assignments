@@ -1,0 +1,42 @@
+body {
+  background-color: aliceblue;
+}
+
+h1 {
+  text-align: center;
+}
+
+.container {
+  margin: auto;
+  left: 0;
+  right: 0;
+  height: 600px;
+  width: 600px;
+  background-color: white;
+}
+
+.orange {
+  height: 200px;
+  background-color: #E05207;
+}
+
+.circle {
+  height: 150px;
+  width: 150px;
+  position: relative;
+  left: 225px;
+  top: 50px;
+  bottom: 10px;
+  border-radius: 50%;
+  background-color: #E05207;
+}
+
+.green {
+  height: 200px;
+  position: relative;
+  top: 80px;
+  background-color: #0EAF2B;
+}
+
+
+

@@ -1,0 +1,53 @@
+body {
+  background-color: aliceblue;
+}
+
+h1 {
+  text-align: center
+}
+
+.container {
+  margin: auto;
+  left: 0;
+  right: 0;
+  height: 500px;
+  width: 800px;
+  background-color: #D20E34;
+}
+
+.green {
+  position: relative;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 114px;
+    height: 250px;
+    width: 480px;
+    background-color: #007E3A;
+}
+
+.wht-circle {
+  position: relative;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 36px;
+  height: 180px;
+  width: 180px;
+  background-color: white;
+  border-radius: 50%;
+
+}
+
+.circle {
+  z-index: 1;
+  position: relative;
+  margin: auto;
+  left: 40px;
+  right: 0;
+  top: -144px;
+  height: 180px;
+  width: 180px;
+  background-color: #007E3A;
+  border-radius: 50%;
+}

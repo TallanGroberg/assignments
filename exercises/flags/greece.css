@@ -1,10 +1,14 @@
 body {
   background-color: aliceblue
 }
+h1 {
+  text-align: center;
+}
+
 
 .container {
   background-color: azure;
-  height: 500px;
+  height: 436px;
   width: 800px;
   margin: auto;
   left: 0;
@@ -12,23 +16,24 @@ body {
 }
 
 .corner {
-  z-index: 1;
-  height: 250px;
+  z-index: -1;
+  height: 231px;
   width: 250px;
   background-color: #0D5EAF;
 }
 
 #cross {
   margin-top: 100px;
-  background-color: #C10000;
-  height: 250px;
+  background-color: azure;
+  height: 232px;
   position: relative;
   width: 35px;
   left: 100px;
+  z-index: 2;
 
 }
 #cross:after {
-  background: #c10000;
+  background: azure;
   content: "";
   height: 40px;
   margin: auto;
@@ -36,4 +41,84 @@ body {
   position: absolute;
   top: 93px;
   width: 250px;
+
+}
+
+.stripes {
+  top: 158px;
+  height: 45px;
+  width: 800px;
+  background-color: #0D5EAF;
+  position: absolute;
+  z-index: 0;
+}
+
+.white-stripe {
+  top: -187px;
+  left: 250px;
+  height: 48px;
+  width: 550px;
+  background-color: azure;
+  position: relative;
+  z-index: 0;
+}
+.crs-white {
+  top: -235px;
+  left: 250px;
+  height: 44px;
+  width: 550px;
+  background-color: #0D5EAF;
+  position: relative;
+  z-index: 0;
+}
+
+.stripes-2 {
+  top: -96px;
+  left: 250px;
+  height: 48px;
+  width: 550px;
+  background-color: #0D5EAF;
+  position: relative;
+}
+
+
+.white-stripe-2 {
+  top: -236px;
+  left: 250px;
+  height: 48px;
+  width: 550px;
+  background-color: azure;
+  position: relative;
+}
+
+.first-long-stripe {
+  height: 50px;
+  width: 800px;
+  background-color: azure;
+  position: relative;
+  top: -188px;
+}
+
+.sec-long-stripe {
+  height: 50px;
+  width: 800px;
+  background-color: #0D5EAF;
+  position: relative;
+  top: -188px;
+}
+
+.thir-long-stripe {
+  height: 50px;
+  width: 800px;
+  background-color: azure;
+  position: relative;
+  top: -188px;
+}
+
+.four-long-stripe {
+  height: 50px;
+  width: 800px;
+  background-color: #0D5EAF;
+  position: relative;
+  top: -188px;
 }

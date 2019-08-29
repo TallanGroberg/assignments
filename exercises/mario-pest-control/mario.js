@@ -8,7 +8,7 @@ const showPestName = () => {
   const daPest = document.getElementsByClassName('pest-name')[0].innerHTML = randomPest
   
   const imageShow = () => {
-     document.getElementById('goomba')
+     
     if ( randomPest === 'Goombas') {
       document.getElementsByClassName('showImage')[0].innerHTML = '<img id="goomba"  src="images/goomba.png" alt="hi">'
       
@@ -37,6 +37,7 @@ function handleSubmit(e) {
   let bombLog = num * 7
   let cheepLog = num * 11
   
+
   const whichThing = () => {
     if (submitGoon.checked === true) {
      return [goonLog, ' Coins', 'for', num, submitGoon.value, ].join(' ')
@@ -49,14 +50,18 @@ function handleSubmit(e) {
 
   result = document.getElementById('result').innerHTML = whichThing()
 
-
-  
-  
-  
- 
-  
 }
 
+
+document.getElementById('goomba-rad').addEventListener('click', () => {
+  document.getElementsByClassName('showImage')[0].innerHTML = '<img id="goomba"  src="images/goomba.png" alt="hi">'
+})
+document.getElementById('bomb-rad').addEventListener('click', () => {
+  document.getElementsByClassName('showImage')[0].innerHTML = '<img id="bomb-omb"  src="images/bomb-omb.png" alt="hi">'
+})
+document.getElementById('cheep-rad').addEventListener('click', () => {
+  document.getElementsByClassName('showImage')[0].innerHTML = '<img id="cheep"  src="images/cheep.jpeg" alt="hi">'
+})
 
 
 

@@ -1,0 +1,63 @@
+body {
+  background-color: aliceblue
+}
+
+.header {
+  text-align: center;
+}
+
+.pest-name {
+  text-align: center;
+}
+
+#goomba {
+  height: 100px;
+  width: 100px;
+  margin: auto;
+  position: fixed;
+  left: 0;
+  right: 0;
+
+}
+
+#bomb-omb {
+  height: 100px;
+  width: 100px;
+  margin: auto;
+  position: fixed;
+  left: 0;
+  right: 0;
+}
+
+#cheep {
+  height: 100px;
+  width: 100px;
+  margin: auto;
+  position: fixed;
+  left: 0;
+  right: 0;
+}
+
+#pest-input {
+  margin: auto;
+  left: 0;
+  right: 0;
+  position: relative;
+  text-align: center;
+  top: 159px;
+}
+
+#result {
+  text-align: center;
+  position: relative;
+  top: 4px;
+}
+
+.footer {
+  text-align: center;
+  margin: auto;
+  left: 0;
+  right: 0;
+  position: absolute;
+  bottom: 0;
+}

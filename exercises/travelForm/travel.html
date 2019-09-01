@@ -10,31 +10,38 @@
 <body>
 
   <div class="result"></div>
-  <form>
+  <form name='form'>
     <input 
-    id='name'
+    name='name'
     placeholder="name"
 
     >
 
     <input 
-    id='lastName'
+   
+    name='lastname' 
     placeholder="last-name"
 
     >
     <input 
-    id='age'
+    name='age'
     type="number"
     placeholder="age"
 
     >
     <br />
-    <input 
-    id='gender'
-    type="radio"
-    value="gender"
-    placeholder="gender"
-    >gender <br />
+    gender 
+    <input id='boy' value='boy' name='gender' type="radio"> boy <br />
+     <input id='girl' value='girl' name='gender' type="radio"> girl <br />
+     <input id='other' value='other' name='gender' type="radio"> other<br />
+    <br />
+
+    <select id='daPlaces' name="place"></select> <br />
+    <input type='checkbox' name='lactose' value='lactose free' >lactose free<br />
+
+    <input type="checkbox" name="kosher" value="kosher">kosher<br>
+
+<input type="checkbox" name="veg" value="vegitarian">vegitarian<br>
 
     <button>Submit</button>
   </form>

@@ -28,35 +28,33 @@ addEventListener('submit', function(e) {
   const num = document.form.age.value;
   const gender = document.form.gender.value
   const thatPlace = document.form.place.value
-  const lac = document.form.lactose
-  const kosh = document.form.kosher 
-  const veg = document.form.veg
+  const diet = document.form.diet
   
-  const diet = [lac, kosh, veg ]
+  // this.console.log(diet.checked)
+  
   function eats() {
-   
+   const dietRestrictions = []
 
     for (let i = 0; i > diet.length; i++) {
+      console.log(diet)
       
-
-      return i
-      // if ([i].checked === true) {
-      //   return [i].value 
-      // } else {
-      //   return null
-      // }
+      if (diet[i].checked === true) {
+        diet[i.value].push(dietRestrictions)
+      } else {
+        return null
+      }
     }
- 
 
-  if (lac.checked === true) {
-    return lac.value
-    } else if (kosh.checked === true) {
-    return kosh.value
-    } else if (veg.checked === true) {
-    return veg.value
-    } else {
-      return null
-    }
+
+  // if (lac.checked === true) {
+  //   return lac.value
+  //   } else if (kosh.checked === true) {
+  //   return kosh.value
+  //   } else if (veg.checked === true) {
+  //   return veg.value
+  //   } else {
+  //     return null
+  //   }
   }
   
   
@@ -65,8 +63,8 @@ addEventListener('submit', function(e) {
 
 
 
-  const result = alert( [name, lastName, num, gender, thatPlace, eats()  ].join(', ') )
-  console.log(result,)
+  // const result = alert( [name, lastName, num, gender, thatPlace, eats()  ].join(', ') )
+  console.log(eats())
 })
 
 

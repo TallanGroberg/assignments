@@ -11,7 +11,7 @@ xhr.onreadystatechange = function() {
 function listToDOM(arr) {
   console.log(arr)
   let counter = 1; 
-  let pika =  arr.map( p => ` <h3>${counter++}: ${[p.name].reduce( (t, f) => t.concat(f))}</h3>`)
+  let pika =  arr.map( p => ` <div class="card"><h3>${counter++}: ${[p.name].reduce( (t, f) => t.concat(f))}</h3></div>`)
   document.getElementById('content').innerHTML = pika.join(' ')
 }
 xhr.open("GET", "https://api.vschool.io/pokemon", true)

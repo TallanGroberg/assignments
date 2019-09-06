@@ -43,15 +43,23 @@ function fight() {
 
 
   if (ogre.hp < 0) {
+    inventoryStuff()
     killCount += 1;
+    
     console.log("you killed the ogre with a mighty")
   }
+}
+
+function inventoryStuff() {
+  return 'test'
 }
 
 
 
 
-console.log(walk(), findEnemy())
+
+
+console.log(walk(), findEnemy(), inventoryStuff())
 
 
 function lose() {

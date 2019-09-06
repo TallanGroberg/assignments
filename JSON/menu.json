@@ -1,0 +1,11 @@
+{
+  "menu": {
+    "appetizers": [
+      { 
+        "name": "fries",
+        "ingredients": ["potato", "oil", "salt"],
+        "description": "they are fries"
+      }
+    ]
+  }
+}

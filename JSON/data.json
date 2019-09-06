@@ -1,0 +1,9 @@
+
+
+const data = [
+
+  {"name": 'blah', "age": 'something'},
+
+]
+
+module.export = './data.json'

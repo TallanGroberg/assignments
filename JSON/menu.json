@@ -5,7 +5,17 @@
         "name": "fries",
         "ingredients": ["potato", "oil", "salt"],
         "description": "they are fries"
-      }
+      },
+      { "name": "oinion rings",
+      "ingredients": ["breading", "oil", "salt", "onion"],
+      "description": "they are the onioness"}
     ]
+  },
+  "sandwiches": [
+  { 
+    "name": "ruben",
+    "ingredients": ["bread", "salami", "swiss"],
+    "description": "delicious"
   }
+  ]
 }

@@ -15,43 +15,93 @@ axios.get('https://api.vschool.io/tallan/todo/')
     
   })
   function listTodos(content) {
+    let counter = 1;
     for (var i = 0; i < content.length; i++) {
       
       const container = document.createElement('div')
       const title = document.createElement('h1')
       const description = document.createElement('h4')
-      const button = document.createElement('button')
+      const edit = document.createElement('button')
       const del = document.createElement('button')
       const form = document.createElement('form')
       const input = document.createElement('input')
-      title.textContent = content[i].title 
+      const putDescrip = document.createElement('input')
+      const checkmark = document.createElement('input')
+      const checktext = document.createElement('p')
+      checktext.innerHTML = 'mark complete </br />'
+      input.type = 'text'
+      input.name = 'edit'
+      input.placeholder = 'edit title'
+      putDescrip.type = 'text'
+      putDescrip.name = 'descript'
+      putDescrip.placeholder = 'edit description'
+      checkmark.type = 'checkbox'
+      checkmark.name = 'complete'
+      
+    // console.log(checkmark) 
+      title.textContent = ` ${counter++}: ${content[i].title} `
       description.textContent = content[i].description 
-      button.textContent = 'edit'
+      
+      edit.textContent = 'edit'
       del.textContent = 'delete'
+      const theId = content[i]._id
 
       
       
       document.body.appendChild(container)
       container.appendChild(title)
       container.appendChild(description)
-  
-      container.appendChild(button)
-      container.appendChild(del)
+      
+      container.appendChild(edit)
       container.appendChild(form)
-
-
+      
+      
+      
       form.appendChild(input)
-      input.classList.add(`${content[i]._id}`)
+      form.appendChild(putDescrip)
+      form.appendChild(checktext)
+      form.appendChild(checkmark)
+      form.appendChild(edit)
+      input.classList.add(theId)
+      putDescrip.classList.add(theId)
+      checkmark.classList.add(theId)
+      container.appendChild(del)
+      del.classList.add(theId)
+      
       
       if (content[i].completed) {
-        title.classList.add('complete')
+        title.classList.add('completed')
       }
+      
+      let titleId = container.children[2][0]
+      let descripId = container.children[2][1]
+      let checkId = container.children[2][2]
+      
+      // console.dir(checkId)
+      console.log(container.children[2][2].checked)
+      
+      form.addEventListener('submit', function(e) {
+        e.preventDefault()
+        axios.put(`https://api.vschool.io/tallan/todo/${titleId.className}`,  {title: titleId.value, description: descripId.value}) 
 
-      console.log(container)
+        
+        
+        if(checkId.checked === true) {
+          axios.put(`https://api.vschool.io/tallan/todo/${titleId.className}`,  { completed: true}) 
+          } 
+        
+      })
+      
+      del.addEventListener('click', function() {
+        axios.delete(`https://api.vschool.io/tallan/todo/${theId}`)
+      })
+
       
       
     }
   }
+
+  
 
 
       function updateObj() {

@@ -111,18 +111,17 @@ axios.get('https://api.vschool.io/tallan/todo/')
       
       form.addEventListener('submit', function(e) {
         e.preventDefault()
-          
-          axios.put(`https://api.vschool.io/tallan/todo/${titleId.className}`,  {title: titleId.value, description: descripId.value, imgUrl: imgId.value }) 
-          
-          if(checkId.checked === true) {
-            axios.put(`https://api.vschool.io/tallan/todo/${titleId.className}`,  { completed: true}) 
-          } 
-          
-          if(checkId.checked === false) {
-            axios.put(`https://api.vschool.io/tallan/todo/${titleId.className}`,  { completed: false}) 
-          } 
-          
-        });
+        updateObj = {}
+          if (titleId.value !== '') {updateObj.title = titleId.value}
+          if (descripId.value !== '') {updateObj.description = descripId.value}
+          if (imgId.value !== '') {updateObj.imgUrl = imgId.value }
+            axios.put(`https://api.vschool.io/tallan/todo/${titleId.className}`,  { completed: checkId.checked})
+            axios.put(`https://api.vschool.io/tallan/todo/${titleId.className}`,  updateObj)
+          });
+
+
+
+
 
       del.addEventListener('click', function() {
         axios.delete(`https://api.vschool.io/tallan/todo/${theId}`)
@@ -136,9 +135,9 @@ form.addEventListener('submit', function(e)  {
   let d = document.form.description.value 
   console.log(d)
   let t = document.form.title.value
-  let i = document.form.image.value
+  let imge = document.form.image.value
 
-  axios.post('https://api.vschool.io/tallan/todo/', {title: t, description: d, imgUrl: i})
+  axios.post('https://api.vschool.io/tallan/todo/', {title: t, description: d, imgUrl: imge})
   .catch(err => console.log(err))
 })
 

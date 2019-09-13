@@ -1,14 +1,10 @@
 
-
-
-
-
 axios.get('https://api.vschool.io/tallan/todo/')
 
 .then( res => {
     const content = res.data.reverse()
     listTodos(content)
-    console.log(content)
+    
   })
   .catch( err => {
     console.log(err)
@@ -18,10 +14,9 @@ axios.get('https://api.vschool.io/tallan/todo/')
   function listTodos(content) {
     
     const make = e => (document.createElement(e))
-    
+    const appen = (p, c) => (p.appendChild(c))
     let counter = 1;
     for (var i = 0; i < content.length; i++) {
-
       const container = make('div')
       const title = make('h1')
       const description = make('h4')
@@ -36,19 +31,12 @@ axios.get('https://api.vschool.io/tallan/todo/')
       const img = make('img')
       const imgInput = make('input')
       
-      console.log(imgInput)
       
-      
-      //img
       
       
       img.src = content[i].imgUrl
       aTag.href = img.src
-      console.log(img.src)
       
-      
-      // console.log(aTag)
-      // console.log(img)
       imgInput.type = 'text'
       imgInput.name = 'image'
       imgInput.placeholder = 'image URL goes here'
@@ -71,9 +59,9 @@ axios.get('https://api.vschool.io/tallan/todo/')
 
 
       
-      document.body.appendChild(container)
-      container.appendChild(title)
-      container.appendChild(description)
+      appen(document.body, container)
+      appen(container,title)
+      appen(container,description)
       aTag.appendChild(img)
       container.appendChild(aTag)
       
@@ -87,13 +75,14 @@ axios.get('https://api.vschool.io/tallan/todo/')
       form.appendChild(checkmark)
       form.appendChild(edit)
       input.classList.add(theId)
+      container.classList.add('container')
       putDescrip.classList.add(theId)
       checkmark.classList.add(theId)
       imgInput.classList.add(theId)
-
       img.classList.add('img')
       container.appendChild(del)
       del.classList.add(theId)
+      del.classList.add('delete')
       
       
       if (content[i].completed === true) {
@@ -104,10 +93,10 @@ axios.get('https://api.vschool.io/tallan/todo/')
       let titleId = container.children[3][1]
       let descripId = container.children[3][2]
       let checkId = container.children[3][3]
-      // console.dir(checkId)
-      console.log('imgId:  ',imgId )
 
-      // https://res.cloudinary.com/teepublic/image/private/s--L1mZKevQ--/t_Preview/b_rgb:ffffff,c_limit,f_jpg,h_630,q_90,w_630/v1550613309/production/designs/4241058_0.jpg
+
+
+  
       
       form.addEventListener('submit', function(e) {
         e.preventDefault()
@@ -117,6 +106,10 @@ axios.get('https://api.vschool.io/tallan/todo/')
           if (imgId.value !== '') {updateObj.imgUrl = imgId.value }
             axios.put(`https://api.vschool.io/tallan/todo/${titleId.className}`,  { completed: checkId.checked})
             axios.put(`https://api.vschool.io/tallan/todo/${titleId.className}`,  updateObj)
+            function autoRefresh() {
+              setTimeout("location.reload(true);", 100);
+           }
+          autoRefresh()
           });
 
 
@@ -125,24 +118,32 @@ axios.get('https://api.vschool.io/tallan/todo/')
 
       del.addEventListener('click', function() {
         axios.delete(`https://api.vschool.io/tallan/todo/${theId}`)
+        function autoRefresh() {
+          setTimeout("location.reload(true);", 100);
+       }
+      autoRefresh()
       })
 
     }
   }
 
+
 form.addEventListener('submit', function(e)  {
   e.preventDefault()
   let d = document.form.description.value 
-  console.log(d)
   let t = document.form.title.value
   let imge = document.form.image.value
 
   axios.post('https://api.vschool.io/tallan/todo/', {title: t, description: d, imgUrl: imge})
   .catch(err => console.log(err))
+  function autoRefresh() {
+    setTimeout("location.reload(true);", 1000);
+ }
+autoRefresh()
 })
 
 
 
-// console.log(defaultImage())
+
 
 

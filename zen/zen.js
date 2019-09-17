@@ -4,3 +4,13 @@
 // experiement with fonts to get the right ones 
 
 console.log('test')
+
+function cityFacts(cit) {
+	return `${cit.name} has a population of ${cit.population} on the continent: ${cit.continent}`
+}
+
+console.log(cityFacts({
+  name: "Paris",
+  population: "2,140,526",
+  continent: "Europe"
+}))

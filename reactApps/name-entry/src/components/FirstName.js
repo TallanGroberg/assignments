@@ -1,21 +1,21 @@
-
 import React from 'react';
-import { stat } from 'fs';
 
 const FirstName = (props) => {
 
-  const {handleChange,  state, } = props
+  const { state, handleChange} = props
   return (
-    <>
-    <p>Last Name</p>
-        <input 
-        type="text"
+    <div>
+      
+        <p>first name</p>
+        <input
+        type='text'
         placeholder="first name"
         value={state.firstName}
+        name="firstName"
         onChange={handleChange}
-        name='firstName'
         />
-        </>
+        </div>
+ 
   );
 };
 

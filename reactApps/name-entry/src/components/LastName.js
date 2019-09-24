@@ -1,21 +1,18 @@
 import React from 'react';
 
-
 const LastName = (props) => {
-
-  const { handleChange, state} = props
+  const { handleChange, state } = props
   return (
-      <>
-      <p>First Name</p>
+    <div>
+      <p>Last Name</p>
       <input
         type='text'
-        name='lastName'
-        placeholder='last name'
+        placeholder="last name"
         value={state.lastName}
+        name="lastName"
         onChange={handleChange}
-      />
-      <br />
-      </>
+        />
+    </div>
   );
 };
 
